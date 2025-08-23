@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../public/Neue Montreal/NeueMontreal-Light.otf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Neue Montreal', sans-serif;
+  background-color: black;
+  overflow: hidden;
+}
+
+@keyframes moveInCircle {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveVertical {
+  0% { transform: translateY(-50%); }
+  50% { transform: translateY(50%); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes moveHorizontal {
+  0% { transform: translateX(-50%) translateY(-10%); }
+  50% { transform: translateX(50%) translateY(10%); }
+  100% { transform: translateX(-50%) translateY(-10%); }
+}
+
+/* Liaison avec Tailwind */
+.animate-moveCircle {
+  animation: moveInCircle 40s linear infinite;
+}
+
+.animate-moveCircleReverse {
+  animation: moveInCircle 20s reverse infinite;
+}
+
+.animate-moveVertical {
+  animation: moveVertical 30s ease infinite;
+}
+
+.animate-moveHorizontal {
+  animation: moveHorizontal 40s ease infinite;
+}
