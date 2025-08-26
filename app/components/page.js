@@ -2,7 +2,6 @@
 {/*navbar page*/}
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 
 export default function Navbar(){
 
@@ -10,7 +9,7 @@ export default function Navbar(){
     const links = [
         {href: "/",label: "Home"},
         {href: "/about",label: "About"},
-        {href: "/myhandi",label: "My Hobbies & Interests"},
+        {href: "/skills",label: "My Skills"},
         {href: "/Myprojects",label: "My Projects"},
         {href: "/contact",label: "Contact"}
     ];
@@ -20,7 +19,7 @@ export default function Navbar(){
             <h1 className="text-[30px] ">El Rhomari Youssef </h1>
             <p className="text-xs">Developer & Designer</p>
             </div>
-            <ul className=" flex flex-col gap-y-[15px] ml-7">
+            <ul className=" flex flex-col gap-y-[15px] ml-7 text-2xl mt-20">
                 {links.map((link) => {
                     const isactive = pathname === link.href;
                     return (
