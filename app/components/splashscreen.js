@@ -21,7 +21,7 @@ export default function Splashscreen() {
             return null;
         }
     return(
-        <div className={`fixed inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ease-in-out ${isfadingout ?'opacity-0' : 'opacity-100'} `}>
+        <div className={`z-100 fixed inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ease-in-out ${isfadingout ?'opacity-0' : 'opacity-100'} `}>
             <h1 className="text-3xl md:text-3xl font-bold text-white animate-fadeIn">
                 ElRhomari  Youssef  Portfolio
             </h1>

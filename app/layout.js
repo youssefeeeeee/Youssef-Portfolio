@@ -28,11 +28,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <Splashscreen />
-        <main className="border border-white min-h-[calc(100vh-1rem)] sm:min-h-[calc(100vh-3rem)] m-4 sm:m-6 sm:mb-6 ">
+        <main className="border-2 border-black  min-h-[calc(100vh-1rem)] sm:min-h-[calc(100vh-3rem)] m-4 sm:m-6 sm:mb-6 ">
          <div className=""> {children} </div>
           <div className="absolute inset-0 z-[-1] "> <Bg/> </div>
         </main>
-        <footer className="text-white ml-10 text-[11px]">&copy; Youssef elrhomari</footer>
+        <footer className="ml-10 text-[11px]">&copy; Youssef elrhomari</footer>
       </body>
     </html>
   );

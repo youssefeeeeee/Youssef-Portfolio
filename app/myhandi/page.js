@@ -1,10 +1,10 @@
 import Navbar from "../components/page";
 export default function MyHandi() {
     return (
-        <div className="  ">
+        <div>
             <Navbar/>
-            <div className="mt-20 flex flex-col items-end ">
-                <ul className="text-white list-disc " >
+            <div className="mt-10 flex flex-col items-end mr-10">
+                <ul className="text-gray-800 font-bold list-disc ">
                     <li>Web development and creating personal projects</li>
                     <li>Learning new techniques in cybersecurity</li>
                     <li>Reading books on computer science and new technologies</li>

@@ -3,14 +3,14 @@ export default function Contact(){
     return (
         <div>
             <Navbar/>
-            <div className="text-white mr-10">
-                <form className="flex flex-col items-end">
-                    <label className="mr-58 mb-1">Name : </label>
-                    <input type="text" className="bg-white text-black rounded-md w-70 h-7 " placeholder="Enter your name"/>
-                    <label className="mr-59 mb-1 mt-1">Email : </label>
-                    <input type="email"  className="bg-white text-black rounded-md w-70 h-7" placeholder="Enter your email"/>
-                    <label className="mr-53 mb-1 mt-1" >Message : </label>
-                    <textarea placeholder="Enter your message"  className="bg-white text-black rounded-md w-70"></textarea>
+            <div className="text-gray-800 absolute translate-x-130 -translate-y-50" >
+                <form className="flex flex-col">
+                    <label className="m-1 font-bold text-2xl">Name : </label>
+                    <input type="text" className="bg-black text-white rounded-md w-100 h-10 " placeholder="Enter your name"/>
+                    <label className="font-bold m-1 text-2xl">Email : </label>
+                    <input type="email"  className="bg-black text-white rounded-md w-100 h-10" placeholder="Enter your email"/>
+                    <label className="font-bold text-2xl" >Message : </label>
+                    <textarea placeholder="Enter your message"  className="bg-black text-white rounded-md w-100 " rows={5}></textarea>
                 </form>
             </div>
         </div>

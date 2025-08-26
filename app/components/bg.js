@@ -52,7 +52,7 @@ export default function Bg() {
       const delta = time - prevTime;
 
       // Clear (full opaque black)
-      ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+      ctx.fillStyle = 'rgba(245, 245, 245, 1)';
       ctx.fillRect(0, 0, c.width / dpr, c.height / dpr);
 
       const cx = (c.width / dpr) / 2;
@@ -60,7 +60,7 @@ export default function Bg() {
       const t = performance.now() * 0.001;
 
       const count = 100;
-      ctx.fillStyle = 'white';
+      ctx.fillStyle = 'black';
       const radius = 60;
       const diameter = radius * 2;
 
