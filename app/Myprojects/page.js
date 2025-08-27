@@ -35,7 +35,7 @@ export default function Projects() {
     return (
         <div className="overflow-hidden">
             <Navbar/>
-            <div className="absolute text-gray-800 h-[500px] overflow-y-auto overflow-x-hidden  translate-x-200 -translate-y-80 max-w-180 " > {/*scroll box*/}
+            <div className="absolute text-gray-800 h-[500px] overflow-y-auto overflow-x-hidden  translate-x-200 -translate-y-80 max-w-180 bg-stone-100" > {/*scroll box*/}
                 <div className=" mt-3 ">
                 <h2 className="text-3xl font-bold ">Mini-Game “Super voiture 2D” – C++ & SFML </h2>
                     <p className="mt-2 text-gray-700">

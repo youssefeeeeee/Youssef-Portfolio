@@ -1,3 +1,5 @@
+// layout.js
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Splashscreen from "./components/splashscreen";
@@ -28,9 +30,16 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <Splashscreen />
-        <main className="border-2 border-black  min-h-[calc(100vh-1rem)] sm:min-h-[calc(100vh-3rem)] m-4 sm:m-6 sm:mb-6 ">
-         <div className=""> {children} </div>
-          <div className="absolute inset-0 z-[-1] "> <Bg/> </div>
+        <main className="relative border-2 border-black min-h-[calc(100vh-1rem)] sm:min-h-[calc(100vh-3rem)] m-4 sm:m-6 sm:mb-6 ">
+          {/* Couche d'arrière-plan (z-0) */}
+          <div className="absolute inset-0 z-0">
+            <Bg />
+          </div>
+
+          {/* Couche de contenu (z-10), placée AU-DESSUS */}
+          <div className="relative z-10">
+            {children}
+          </div>
         </main>
         <footer className="ml-10 text-[11px]">&copy; Youssef elrhomari</footer>
       </body>

@@ -15,8 +15,8 @@ export default function Bg() {
 
     // Apply CSS sizing (visual) once
     c.style.imageRendering = 'pixelated';
-    c.style.width = '100vw';
-    c.style.height = '100vh';
+    c.style.width = '100%';
+    c.style.height = '100%';
 
     // Setup canvas pixel size for high DPI
     const setup = () => {
@@ -100,5 +100,11 @@ export default function Bg() {
     };
   }, []);
 
-  return <canvas id="c" ref={canvasRef} className="absolute inset-0 w-full h-full" />;
+  return (
+    <canvas
+      id="c"
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full "
+    />
+  );
 }

@@ -19,7 +19,7 @@ export default function Navbar(){
             <h1 className="text-[30px] ">El Rhomari Youssef </h1>
             <p className="text-xs">Developer & Designer</p>
             </div>
-            <ul className=" flex flex-col gap-y-[15px] ml-7 text-2xl mt-20">
+            <ul className=" flex  gap-x-[35px] text-2xl fixed bottom-9 w-371 justify-center  bg-stone-100">
                 {links.map((link) => {
                     const isactive = pathname === link.href;
                     return (
