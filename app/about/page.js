@@ -1,31 +1,95 @@
+"use client";
 import Navbar from "../components/page";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import {motion} from "framer-motion";
 export default function About() {
+  const badges = [
+    "CS Student",
+    "Passionate about Cybersecurity",
+    "Linux & Open-Source Enthusiast",
+    "Aspiring Cybersecurity Engineer",
+    "Self-Motivated Learner"
+  ];
+  const [index, setindex] = useState(0);
+  useEffect(() => {
+      const interval = setInterval(() => {
+        setindex((prevind) => (prevind + 1) % badges.length);
+  }, 2500);
+      return () => clearInterval(interval);
+  },[badges.length]);
+
   return (
     <div >
       <Navbar/>
-            <div className="absolute translate-x-230 -translate-y-60 max-w-400 ">
+            <div className="w-full m-auto mt-10">
               {/*<Image src="/port pic.jpg" width={100} height={100} className="rounded-md " alt="pic" />*/}
-              <div className="m-2">
-                <h1 className="text-gray-900 font-extrabold text-2xl mb-2 max-w-110 text-center bg-stone-100">About Me</h1>
-                <h2 className="text-gray-900 font-bold text-xl bg-stone-100 max-w-120">Brief description : </h2>
-                <p className="text-gray-800 font-bold w-1/3 bg-stone-100"> 
-                    My name is <strong>Youssef Elrhomari</strong>, a Computer Science student passionate 
+              <div className="w-150 m-auto">
+                  <motion.div  
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}        
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                       <h1 className="text-center text-5xl my-5 font-extrabold bg-stone-100 underline">Who Am I</h1>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}        
+                    transition={{ duration: 1.2, ease: "easeOut" }}
+                  >
+                <p className="text-center text-xl font-bold bg-stone-100 my-5"> 
+                    My name is <strong >Youssef Elrhomari</strong>, a Computer Science student passionate 
                     about software development and cybersecurity.  
                     My goal is to become a cybersecurity expert by combining my skills in 
                     programming, networking, and systems to build secure and innovative solutions.
+                    Outside of coding, I focus on self-improvement, fitness, and lifelong learning, which I believe help me stay disciplined and creative.
                 </p>
+                </motion.div>
               </div>
-               <div className="m-2 bg-stone-100 max-w-120" >
-                <h2 className="text-gray-900 font-bold text-xl">My Hobbies & Interests : </h2>
-                <ul className="text-gray-800 font-bold list-disc ml-10">
-                    <li>Web development and creating personal projects</li>
-                    <li>Learning new techniques in cybersecurity</li>
-                    <li>Reading books on computer science and new technologies</li>
-                    <li>Sports & fitness to maintain a healthy balance</li>
-                    <li>Video games as a way to relax and boost creativity</li>
-                </ul>
+              <motion.div
+              initial = {{ transform: "translateX(-100px)" }}
+              animate={{ transform: "translateX(0px)" }}
+              transition={{ type: "spring" }}
+              >
+              <div className="flex justify-center items-center h-40 overflow-hidden">
+                <div className="flex space-x-6">
+                  {badges.map((badge,i) => {
+                    let position = (i - index + badges.length) % badges.length;
+                    let baseclass =  "px-4 py-2 rounded-md transition-all duration-700 ease-in-out";
+                    if (position === 0){
+                      return (
+                         <div
+                            key={i}
+                            className={`${baseclass} bg-blue-900 text-white text-xl scale-125 blur-0 shadow-lg`}
+                          >
+                            {badge}
+                          </div>
+                      );
+                    }else if (position === 1 || position === badges.length - 1){
+                      return (
+                        <div
+                           key={i}
+                           className={`${baseclass} bg-blue-900 text-white text-lg scale-110 blur-sm shadow-md`}
+                         >
+                           {badge}
+                         </div>
+                     );
+                  }else{
+                      return (
+                           <div
+                              key={i}
+                              className={`${baseclass} bg-blue-900 text-white text-sm scale-90 blur-md opacity-50`}
+                            >
+                              {badge}
+                            </div>
+                   );
+                  }
+                })};
+                </div>
+
               </div>
+              </motion.div>
             </div>
     </div>
   )
