@@ -1,8 +1,9 @@
 "use client";
 import Navbar from "../components/page";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import { usesplash } from "../context/splashcontext";
 import {motion} from "framer-motion";
+
 export default function About() {
   const badges = [
     "CS Student",
@@ -18,16 +19,15 @@ export default function About() {
   }, 2500);
       return () => clearInterval(interval);
   },[badges.length]);
-
+ const {splashseen} = usesplash();
   return (
     <div >
       <Navbar/>
             <div className="w-full m-auto mt-10">
-              {/*<Image src="/port pic.jpg" width={100} height={100} className="rounded-md " alt="pic" />*/}
               <div className="w-150 m-auto">
                   <motion.div  
                     initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}        
+                    animate={ splashseen ? { opacity: 1, y: 0 } : {}}        
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                        <h1 className="text-center text-5xl my-5 font-extrabold bg-stone-100 underline">Who Am I</h1>
@@ -35,7 +35,7 @@ export default function About() {
 
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}        
+                     animate={ splashseen ? { opacity: 1, x: 0 } : {}}           
                     transition={{ duration: 1.2, ease: "easeOut" }}
                   >
                 <p className="text-center text-xl font-bold bg-stone-100 my-5"> 
@@ -48,8 +48,8 @@ export default function About() {
                 </motion.div>
               </div>
               <motion.div
-              initial = {{ transform: "translateX(-100px)" }}
-              animate={{ transform: "translateX(0px)" }}
+              initial = {{ opacity: 0,transform: "translateX(-100px)" }}
+              animate={ splashseen ? { opacity: 1,transform: "translateX(0px)" } : {}}
               transition={{ type: "spring" }}
               >
               <div className="flex justify-center items-center h-40 overflow-hidden">

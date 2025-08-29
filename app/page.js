@@ -1,16 +1,17 @@
 "use client";
-import Link from "next/link";
 import Navbar from "./components/page";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { usesplash } from "./context/splashcontext"; 
 export default function Home() {
+  const {splashseen} = usesplash();
   return (
     <div className="text-gray-800 font-bold ">
     <Navbar/>
     <section className="flex flex-row-reverse translate-y-10 translate-x-50  items-center  justify-between max-w-[900px]">
       <motion.div  
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}        
+      animate={splashseen ? { opacity: 1, y: 0 } : {}}        
       transition={{ duration: 0.5, ease: "easeOut" }}
       >
       <Image src="/port pic.jpg" width={300} height={300} className="rounded-full " alt="pic" />
@@ -18,14 +19,14 @@ export default function Home() {
       <div className="flex flex-col max-w-[500px]">
       <motion.div  
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}        
+      animate={splashseen ? { opacity: 1, y: 0 } : {}}            
       transition={{ duration: 0.8, ease: "easeOut" }}
       >
       <p className="m-2  bg-stone-100 text-2xl">HI, I am Youssef, I am learning Next.js you can download the resume.</p>
       </motion.div>
       <motion.div
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}        
+      animate={splashseen ? { opacity: 1, y: 0 } : {}}           
       transition={{ duration: 0.8, ease: "easeOut" }}
       >
       <div className="flex items-center gap-2 m-2">
@@ -37,7 +38,7 @@ export default function Home() {
 
        <motion.div
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}        
+      animate={splashseen ? { opacity: 1, y: 0 } : {}}           
       transition={{ duration: 0.8, ease: "easeOut" }}
       >
       <div className="flex items-center gap-4 mt-5">

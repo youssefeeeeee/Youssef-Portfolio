@@ -1,5 +1,5 @@
 // layout.js
-
+import { SplashProvider } from "./context/splashcontext";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Splashscreen from "./components/splashscreen";
@@ -38,7 +38,9 @@ export default function RootLayout({ children }) {
 
           {/* Couche de contenu (z-10), placée AU-DESSUS */}
           <div className="relative z-10">
+            <SplashProvider>
             {children}
+            </SplashProvider>
           </div>
         </main>
         <footer className="ml-10 text-[11px]">&copy; Youssef elrhomari</footer>
