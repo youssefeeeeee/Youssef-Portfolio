@@ -32,12 +32,13 @@ export default function Navbar(){
             <h1 className="text-[25px] md:text-[30px] bg-stone-100 ">El Rhomari Youssef </h1>
             <p className="text-xs">Developer & Designer</p>
             </div>
-            <div className="hidden md:flex md:gap-x-4">
+            {pathname !== "/" && (
+            <div className=" md:flex md:gap-x-4">
                 {socials.map((social) => (
-                
                     <a key={social.href} href={social.href}><Image src={social.img} height={25} width={25} alt={social.label}></Image></a>
                 ))}
             </div>
+            )}
             <button className="md:hidden bg-stone-100" onClick={() => setisopen(!isopen)}>
                 {isopen ?  <X/>: <Menu/>}
             </button>
