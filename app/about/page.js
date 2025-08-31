@@ -23,14 +23,14 @@ export default function About() {
   return (
     <div >
       <Navbar/>
-            <div className="w-full m-auto mt-10">
-              <div className="w-150 m-auto">
+            <div className="w-full m-auto mt-20 md:mt-10">
+              <div className="md:w-150 md:m-auto ">
                   <motion.div  
                     initial={{ opacity: 0, y: 50 }}
                     animate={ splashseen ? { opacity: 1, y: 0 } : {}}        
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                       <h1 className="text-center text-5xl my-5 font-extrabold bg-stone-100 underline">Who Am I</h1>
+                       <h1 className="text-center text-4xl md:text-5xl my-5 font-extrabold bg-stone-100 underline">Who Am I</h1>
                   </motion.div>
 
                   <motion.div
@@ -38,7 +38,7 @@ export default function About() {
                      animate={ splashseen ? { opacity: 1, x: 0 } : {}}           
                     transition={{ duration: 1.2, ease: "easeOut" }}
                   >
-                <p className="text-center text-xl font-bold bg-stone-100 my-5"> 
+                <p className="text-center text-[15px] md:text-xl font-bold bg-stone-100 my-5"> 
                     My name is <strong >Youssef Elrhomari</strong>, a Computer Science student passionate 
                     about software development and cybersecurity.  
                     My goal is to become a cybersecurity expert by combining my skills in 
@@ -52,8 +52,8 @@ export default function About() {
               animate={ splashseen ? { opacity: 1,transform: "translateX(0px)" } : {}}
               transition={{ type: "spring" }}
               >
-              <div className="flex justify-center items-center h-40 overflow-hidden">
-                <div className="flex space-x-6">
+              <div className="flex justify-center items-center h-90 md:h-40 overflow-hidden">
+                <div className="flex flex-col md:flex-row md:space-x-6 space-y-6">
                   {badges.map((badge,i) => {
                     let position = (i - index + badges.length) % badges.length;
                     let baseclass =  "px-4 py-2 rounded-md transition-all duration-700 ease-in-out";

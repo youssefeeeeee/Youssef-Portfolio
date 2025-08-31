@@ -2,7 +2,11 @@
 {/*navbar page*/}
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import { useState } from "react";
+import { Menu , X} from "lucide-react";
+import { a } from "framer-motion/client";
+import Image from "next/image";
+import {motion,AnimatePresence} from "framer-motion"
 export default function Navbar(){
 
     const pathname = usePathname();
@@ -13,13 +17,33 @@ export default function Navbar(){
         {href: "/Myprojects",label: "My Projects"},
         {href: "/contact",label: "Contact"}
     ];
+
+    const [isopen, setisopen] = useState(false);
+
+    const socials = [
+        {href:"https://github.com/youssefeeeeee",label:"Github",img:"/github.png"},
+        {href:"https://www.linkedin.com/in/youssef-elrhomari-240a21335/",label:"LinkedIn",img:"/linkedin.png"},
+        {href:"mailto:youssefelrho005@gmail.com", label:"Email",img:"/email.png"}
+    ];
     return (
         <nav className="text-gray-800 font-bold">
-            <div className="m-7 ">
-            <h1 className="text-[30px] ">El Rhomari Youssef </h1>
+            <div className="m-7 flex justify-between">
+            <div>
+            <h1 className="text-[25px] md:text-[30px] bg-stone-100 ">El Rhomari Youssef </h1>
             <p className="text-xs">Developer & Designer</p>
             </div>
-            <ul className=" flex  gap-x-[35px] text-2xl fixed bottom-9 w-371 justify-center  bg-stone-100">
+            <div className="hidden md:flex md:gap-x-4">
+                {socials.map((social) => (
+                
+                    <a key={social.href} href={social.href}><Image src={social.img} height={25} width={25} alt={social.label}></Image></a>
+                ))}
+            </div>
+            <button className="md:hidden bg-stone-100" onClick={() => setisopen(!isopen)}>
+                {isopen ?  <X/>: <Menu/>}
+            </button>
+            </div>
+
+            <ul className="hidden gap-8 md:flex  md:gap-x-[35px] text-2xl md:fixed md:bottom-9 md:w-371 md:justify-center  bg-stone-100">
                 {links.map((link) => {
                     const isactive = pathname === link.href;
                     return (
@@ -34,6 +58,41 @@ export default function Navbar(){
                     );
                 })}
             </ul>
+            <div className="md:hidden">
+            <AnimatePresence>
+            {isopen && (
+                <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="fixed top-0 right-0 h-screen w-full bg-gray-900 text-white flex flex-col items-center justify-center gap-6 text-2xl z-40"
+                >
+                <div className="md:hidden fixed top-0 right-0 w-full h-full z-40 p-8 overflow-y-auto">
+                    <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-lg font-bold"><Menu/></h2>
+                        <button onClick={() => setisopen(false)}><X/></button>
+                    </div>
+                    <ul>
+                        {links.map((link) => (
+                            <li key={link.href} className="my-3">
+                                <Link href={link.href} onClick={()=> setisopen(false)} >{link.label}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <hr className="my-6" />
+                    <ul className="flex flex-col gap-4">
+                        {socials.map((social) => (
+                            <li key={social.href}>
+                                <Link href={social.href} onClick={()=> setisopen(false)} className="hover:text-blue-600">{social.label} ↗</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                </motion.div>
+            )}
+            </AnimatePresence>
+            </div>
         </nav>
     )
 }
