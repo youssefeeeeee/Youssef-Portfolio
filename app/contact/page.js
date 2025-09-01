@@ -1,9 +1,9 @@
 "use client";
 import Navbar from "../components/page";
 import {motion} from "framer-motion";
-import { usesplash } from "../context/splashcontext";
+import { useSplash } from "../context/splashcontext";
 export default function Contact(){
-    const {splashseen} = usesplash();
+    const {splashseen} = useSplash();
     return (
         <div >
             <Navbar/>

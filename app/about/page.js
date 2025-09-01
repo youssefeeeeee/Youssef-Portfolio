@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "../components/page";
 import { useState, useEffect } from "react";
-import { usesplash } from "../context/splashcontext";
+import { useSplash } from "../context/splashcontext";
 import {motion} from "framer-motion";
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
   }, 2500);
       return () => clearInterval(interval);
   },[badges.length]);
- const {splashseen} = usesplash();
+ const {splashseen} = useSplash();
   return (
     <div >
       <Navbar/>

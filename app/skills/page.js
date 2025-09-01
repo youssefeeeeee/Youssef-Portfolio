@@ -2,9 +2,9 @@
 import Navbar from "../components/page";
 import Image from "next/image";
 import {motion} from "framer-motion";
-import { usesplash } from "../context/splashcontext";
+import { useSplash } from "../context/splashcontext";
 export default function MyHandi() {
-    const {splashseen } = usesplash();
+    const {splashseen } = useSplash();
     return (
         <div>
             <Navbar/>

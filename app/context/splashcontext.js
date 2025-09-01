@@ -18,6 +18,6 @@ export function  SplashProvider({ children }){
     );
 }
 
-export function usesplash(){
+export function useSplash(){
     return useContext(splashcontext);
 }

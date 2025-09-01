@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu , X} from "lucide-react";
-import { a } from "framer-motion/client";
 import Image from "next/image";
 import {motion,AnimatePresence} from "framer-motion"
 export default function Navbar(){
