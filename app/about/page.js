@@ -23,14 +23,14 @@ export default function About() {
   return (
     <div >
       <Navbar/>
-            <div className="w-full m-auto mt-20 md:mt-10">
+            <div className="w-full m-auto mt-5 md:mt-10">
               <div className="md:w-150 md:m-auto ">
                   <motion.div  
                     initial={{ opacity: 0, y: 50 }}
                     animate={ splashseen ? { opacity: 1, y: 0 } : {}}        
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                       <h1 className="text-center text-4xl md:text-5xl my-5 font-extrabold bg-stone-100 underline">Who Am I</h1>
+                       <h1 className="text-center text-2xl md:text-5xl my-5 font-extrabold bg-stone-100 underline">Who Am I</h1>
                   </motion.div>
 
                   <motion.div
@@ -38,7 +38,7 @@ export default function About() {
                      animate={ splashseen ? { opacity: 1, x: 0 } : {}}           
                     transition={{ duration: 1.2, ease: "easeOut" }}
                   >
-                <p className="text-center text-[15px] md:text-xl font-bold bg-stone-100 my-5"> 
+                <p className="text-center text-[13px] md:text-xl font-bold bg-stone-100 my-5"> 
                     My name is <strong >Youssef Elrhomari</strong>, a Computer Science student passionate 
                     about software development and cybersecurity.  
                     My goal is to become a cybersecurity expert by combining my skills in 
@@ -61,7 +61,7 @@ export default function About() {
                       return (
                          <div
                             key={i}
-                            className={`${baseclass} bg-blue-900 text-white text-xl scale-125 blur-0 shadow-lg`}
+                            className={`${baseclass} bg-blue-900 text-white text-xl scale-100 md:scale-125 blur-0 shadow-lg`}
                           >
                             {badge}
                           </div>
@@ -70,7 +70,7 @@ export default function About() {
                       return (
                         <div
                            key={i}
-                           className={`${baseclass} bg-blue-900 text-white text-lg scale-110 blur-sm shadow-md`}
+                           className={`${baseclass} bg-blue-900 text-white text-lg scale-90 md:scale-110 blur-sm shadow-md`}
                          >
                            {badge}
                          </div>
@@ -79,7 +79,7 @@ export default function About() {
                       return (
                            <div
                               key={i}
-                              className={`${baseclass} bg-blue-900 text-white text-sm scale-90 blur-md opacity-50`}
+                              className={`${baseclass} bg-blue-900 text-white text-sm scale-70 md:scale-90 blur-md opacity-50`}
                             >
                               {badge}
                             </div>

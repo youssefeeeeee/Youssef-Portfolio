@@ -53,7 +53,7 @@ export default function Projects() {
         </h1>
       </motion.div>
 
-      <div className="grid grid-row-2 md:grid-cols-2 max-w-300 m-auto bg-stone-100 overflow-y-auto h-150 md:h-[400px]">
+      <div className="grid grid-row-2 md:grid-cols-2 max-w-300 m-auto bg-stone-100 overflow-y-auto h-120 md:h-[400px]">
         {/* Project 1 */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}

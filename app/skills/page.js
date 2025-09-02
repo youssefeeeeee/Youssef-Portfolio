@@ -8,7 +8,7 @@ export default function MyHandi() {
     return (
         <div>
             <Navbar/>
-                <div className="  text-black max-w-300 m-auto mt-20 md:mt-5">
+                <div className="  text-black max-w-300 m-auto mt-10 md:mt-5">
                     <motion.div
                     initial={{opacity:0, y:50}}
                     animate={splashseen ? {opacity:1, y:0} : {}}

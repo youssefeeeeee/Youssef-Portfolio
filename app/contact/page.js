@@ -7,13 +7,13 @@ export default function Contact(){
     return (
         <div >
             <Navbar/>
-            <div className="md:-translate-y-20 translate-y-10" >
+            <div className="md:-translate-y-20 translate-y-5" >
                 <motion.div
                 initial={{opacity:0,x:-100}}
                 animate={splashseen ? {opacity:1,x:0}: {}}
                 transition={{duration:0.8}}
                 >
-                <h1 className="text-black text-3xl md:text-5xl text-center font-extrabold underline mb-5">Get in Touch</h1>
+                <h1 className="text-black text-2xl md:text-5xl text-center font-extrabold underline mb-5">Get in Touch</h1>
                 </motion.div>
 
 
@@ -22,7 +22,7 @@ export default function Contact(){
                 animate={splashseen ? {opacity:1,x:0}: {}}
                 transition={{duration:0.8,delay:1.1}}
                 >
-                <div className=" flex  justify-center">
+                <div className=" flex  justify-center p-2">
                 <form className="md:w-full  md:max-w-md max-w-screen p-6 rounded-xl shadow-lg bg-[#161B22]">
                     <label className="font-bold block text-[#E6E6E6] mb-2">Name  </label>
                     <input type="text" className="bw-full p-3 mb-4 rounded-lg bg-[#0D1117] text-[#E6E6E6] border border-[#00BFFF] focus:outline-none focus:ring-2 focus:ring-[#00BFFF]" placeholder="Enter your name"/>

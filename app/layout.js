@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <Splashscreen />
-        <main className="relative border-2 border-black min-h-[calc(100vh-2rem)] md:min-h-[calc(100vh-3rem)] m-4 mb-0 ">
+        <main className="relative border-2 border-black min-h-screen  m-4 sm:m-4 px-2">
           {/* Couche d'arrière-plan (z-0) */}
           <div className="absolute inset-0 z-0">
             <Bg />
