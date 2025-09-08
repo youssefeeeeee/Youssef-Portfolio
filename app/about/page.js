@@ -56,12 +56,12 @@ export default function About() {
                 <div className="flex flex-col md:flex-row md:space-x-6 space-y-6">
                   {badges.map((badge,i) => {
                     let position = (i - index + badges.length) % badges.length;
-                    let baseclass =  "px-4 py-2 rounded-md transition-all duration-700 ease-in-out";
+                    let baseclass =  "min-w-[200px] px-4 py-2 text-center whitespace-nowrap rounded-md transition-all duration-700 ease-in-out";
                     if (position === 0){
                       return (
                          <div
                             key={i}
-                            className={`${baseclass} bg-blue-900 text-white text-xl scale-100 md:scale-125 blur-0 shadow-lg`}
+                            className={`${baseclass} bg-gradient-to-r from-gray-100 to-gray-200 text-black text-xl scale-100 md:scale-125 blur-0 shadow-lg`}
                           >
                             {badge}
                           </div>
@@ -70,7 +70,7 @@ export default function About() {
                       return (
                         <div
                            key={i}
-                           className={`${baseclass} bg-blue-900 text-white text-lg scale-90 md:scale-110 blur-sm shadow-md`}
+                           className={`${baseclass} bg-gradient-to-r from-gray-100 to-gray-200 text-black text-lg scale-90 md:scale-110 blur-sm shadow-md`}
                          >
                            {badge}
                          </div>
@@ -79,7 +79,7 @@ export default function About() {
                       return (
                            <div
                               key={i}
-                              className={`${baseclass} bg-blue-900 text-white text-sm scale-70 md:scale-90 blur-md opacity-50`}
+                              className={`${baseclass} bg-gradient-to-r from-gray-100 to-gray-200 text-black text-sm scale-70 md:scale-90 blur-md opacity-50`}
                             >
                               {badge}
                             </div>

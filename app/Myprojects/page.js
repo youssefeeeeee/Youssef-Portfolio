@@ -53,7 +53,7 @@ export default function Projects() {
         </h1>
       </motion.div>
 
-      <div className="grid grid-row-2 md:grid-cols-2 max-w-300 m-auto bg-stone-100 overflow-y-auto h-120 md:h-[400px]">
+      <div className="grid grid-row-2 md:grid-cols-2 max-w-300 m-auto bg-stone-100 overflow-y-auto h-120 md:h-[400px] leading-[32px]">
         {/* Project 1 */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -71,7 +71,7 @@ export default function Projects() {
             <p className="mt-1 text-gray-700">
               <span className="font-bold">Tools:</span> C++, SFML, Visual Studio Code.
             </p>
-            <p className="mt-1 text-gray-700">
+            <p className="mb-2 text-gray-700">
               <span className="font-bold">What I Learned:</span> Implementing collision detection,
               handling keyboard input, and creating a scoring system. Improved my knowledge of
               event-driven programming.
@@ -111,7 +111,7 @@ export default function Projects() {
             <p className="mt-1 text-gray-700">
               <span className="font-semibold">Tools:</span> MySQL, SQL, Workbench.
             </p>
-            <p className="mt-1 text-gray-700">
+            <p className="mb-2 text-gray-700">
               <span className="font-semibold">What I Learned:</span> Writing efficient SQL queries,
               joins, data reporting, and applying normalization principles. Strengthened my database
               design skills.

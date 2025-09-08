@@ -43,13 +43,13 @@ export default function Navbar(){
             </button>
             </div>
 
-            <ul className="hidden gap-8 md:flex  md:gap-x-[35px] text-2xl md:fixed md:bottom-9 md:w-371 md:justify-center  bg-stone-100">
+            <ul className="hidden gap-8 md:flex  md:gap-x-[35px] text-xl md:fixed md:top-15 md:w-371 md:justify-center ">
                 {links.map((link) => {
                     const isactive = pathname === link.href;
                     return (
                         <li key={link.href}>
                     {isactive && (
-                        <div className="text-lg opacity-[0.25]">{link.label}</div>
+                        <div className="text-2xl text-black font-extrabold underline">{link.label}</div>
                     )}
                     {!isactive && (
                         <Link href={link.href} className="transition-opacity duration-[0.4s] ease-[cubic-bezier(0.1, 0.4, 0.2, 1)] hover:opacity-[0.25]">{link.label}</Link>

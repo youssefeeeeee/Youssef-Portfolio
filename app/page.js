@@ -8,7 +8,8 @@ export default function Home() {
   return (
     <div className="text-gray-800 font-bold">
     <Navbar/>
-    <section className="flex flex-col translate-y-20 items-center md:flex-row-reverse md:translate-y-10 md:translate-x-50   md:items-center  md:justify-between md:max-w-[900px]">
+    <section className="translate-y-15  ">
+      <div className="flex flex-col md:flex-row-reverse justify-center items-center ">
       <motion.div  
       initial={{ opacity: 0, y: 50 }}
       animate={splashseen ? { opacity: 1, y: 0 } : {}}        
@@ -48,6 +49,7 @@ export default function Home() {
         <a href="mailto:youssefelrho005@gmail.com"><Image src="/email.png" height={25} width={25} alt="email"/></a>
       </div>
       </motion.div>
+      </div>
       </div>
       </section>
     </div>
