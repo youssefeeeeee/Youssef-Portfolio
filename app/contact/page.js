@@ -14,10 +14,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_8tni19f", // replace with EmailJS Service ID
-        "template_56goul5", // replace with EmailJS Template ID
+        "service_8tni19f", 
+        "template_56goul5", 
         e.target,
-        "7-13cwxsLHFVMluHa" // replace with EmailJS Public Key
+        "7-13cwxsLHFVMluHa"
       )
       .then(
         () => {
@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <div>
       <Navbar />
-      <div className="">
+      <div >
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={splashseen ? { opacity: 1, x: 0 } : {}}

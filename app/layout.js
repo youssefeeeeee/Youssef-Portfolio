@@ -30,20 +30,14 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <Splashscreen />
-        <main className="relative border-2 bg-stone-100 border-black min-h-[95vh]  m-4 sm:m-4 px-2">
-          {/* Couche d'arrière-plan (z-0) 
-          <div className="absolute inset-0 z-0">
-            <Bg />
-          </div>
-          */}
-          {/* Couche de contenu (z-10), placée AU-DESSUS */}
-          <div className="">
+        <main className="relative border-2 bg-stone-100 border-black m-5 min-h-[calc(100vh-40px)]">
+          <div>
             <SplashProvider>
             {children}
+            <div className=" fixed bottom-0 ml-10 md:text-[15px] text-[12px] text-black">&copy; Youssef elrhomari</div>
             </SplashProvider>
           </div>
         </main>
-        <footer className="ml-10 md:text-[15px] text-[12px] text-black">&copy; Youssef elrhomari</footer>
       </body>
     </html>
   );
