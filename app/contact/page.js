@@ -38,7 +38,7 @@ export default function Contact() {
           animate={splashseen ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-black text-2xl md:text-4xl text-center font-extrabold underline mb-3">
+          <h1 className="text-black text-2xl md:text-4xl text-center font-extrabold underline mb-1">
             Get in Touch
           </h1>
         </motion.div>
