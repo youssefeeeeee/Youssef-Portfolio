@@ -157,17 +157,17 @@ export default function Projects() {
               </p>
               
               <video
-                src="/task-manager-demo.mp4" /* REMEMBER: Rename your video file to match this */
+                src="/demotm.mp4"
                 muted
                 playsInline
                 className="rounded-sm w-100 h-50"
                 ref={(el) => {
-                  videoref.current[2] = el; /* REMEMBER: Update this index if it conflicts with others */
+                  videoref.current[2] = el; 
                 }}
               ></video>
               
               <a
-                href="https://github.com/youssefeeeeee/Task-Manager-Repo" /* REMEMBER: Put your real link here */
+                href="https://github.com/youssefeeeeee/Task-Manager-Repo" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-blue-950 text-white rounded-md w-30 p-1 block mt-2 text-center hover:bg-blue-800 transition-colors"
