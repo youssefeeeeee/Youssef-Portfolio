@@ -167,7 +167,7 @@ export default function Projects() {
               ></video>
               
               <a
-                href="https://github.com/youssefeeeeee/Task-Manager-Repo" 
+                href="https://github.com/youssefeeeeee/Task-Mangement-App" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-blue-950 text-white rounded-md w-30 p-1 block mt-2 text-center hover:bg-blue-800 transition-colors"
