@@ -23,7 +23,7 @@ export default function Home() {
       animate={splashseen ? { opacity: 1, y: 0 } : {}}            
       transition={{ duration: 0.8, ease: "easeOut" }}
       >
-      <p className="m-1  bg-stone-100 text-lg text-center md:text-2xl md:text-left">Hi, I'm Youssef. Next.js Developer & Cybersecurity Specialist. Download my resume.</p>
+      <p className="m-1  bg-stone-100 text-lg text-center md:text-2xl md:text-left">Hi, Im Youssef. Next.js Developer & Cybersecurity Specialist. Download my resume.</p>
       </motion.div>
       <motion.div
       initial={{ opacity: 0, y: 50 }}
