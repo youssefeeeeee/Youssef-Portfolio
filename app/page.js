@@ -23,7 +23,7 @@ export default function Home() {
       animate={splashseen ? { opacity: 1, y: 0 } : {}}            
       transition={{ duration: 0.8, ease: "easeOut" }}
       >
-      <p className="m-1  bg-stone-100 text-lg text-center md:text-2xl md:text-left">HI, I am Youssef, I am learning Next.js you can download the resume.</p>
+      <p className="m-1  bg-stone-100 text-lg text-center md:text-2xl md:text-left">Hi, I'm Youssef. Next.js Developer & Cybersecurity Specialist. Download my resume.</p>
       </motion.div>
       <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -35,7 +35,7 @@ export default function Home() {
       <Image src="/location-pin.png" width={20} height={20} alt="location " className="mb-2"/>
       <p className="mb-3 bg-stone-100">Based in Morocco, Marrakech</p>
       </div>
-      <a href="/Youssef_Elrhomari_IT_Internship_CV.pdf" download className="bg-blue-950 text-white font-bold max-w-[200px] text-center rounded-md p-3 hover:bg-blue-800 mx-2">Download CV</a>
+      <a href="/Youssef_Elrhomari_IT_CV.pdf" download className="bg-blue-950 text-white font-bold max-w-[200px] text-center rounded-md p-3 hover:bg-blue-800 mx-2">Download CV</a>
       </motion.div>
 
        <motion.div
